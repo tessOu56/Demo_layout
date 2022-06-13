@@ -28,13 +28,14 @@ export default () => {
     
     return (
         <Routes>
-            <Route path="/home" element={ <HomePage /> } />
-            <Route path="/about" element={ <AboutUs /> } />
-            <Route path="/gallery" element={ <Gallery /> } />
-            <Route path="/service" element={ <Service /> } />
-            <Route path="/pricing" element={ <Pricing /> } />
-            <Route path="/contact" element={ <ContactUs /> } />
-            <Route path="/" element={ <Navigate to="/home" replace />} />
+            <Route path="/Demo_layout" element={ <Navigate to="/Demo_layout/home" replace />} />
+            <Route path="/Demo_layout/home" element={ <HomePage /> } />
+            <Route path="/Demo_layout/about" element={ <AboutUs /> } />
+            <Route path="/Demo_layout/gallery" element={ <Gallery /> } />
+            <Route path="/Demo_layout/service" element={ <Service /> } />
+            <Route path="/Demo_layout/pricing" element={ <Pricing /> } />
+            <Route path="/Demo_layout/contact" element={ <ContactUs /> } />
+            <Route path="*" element={ <Navigate to="/Demo_layout" replace />} />
         </Routes>
     )
 }

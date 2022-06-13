@@ -33,7 +33,6 @@ export default function MenuProvider ({ children }) {
   
     const DetectRouter = async(path) => {
         const pathname = path.split("/")[1];
-        console.log( 'Menu : ' , path , pathname );
         if( pathname !== "home" ) {
             // 檢查目錄陣列是否有符合條件者
             const checking = await CheckList( MenuList , pathname );
@@ -46,7 +45,7 @@ export default function MenuProvider ({ children }) {
         const checking = await CheckList( MenuList , name );
         if ( !checking ) return console.error("wrong");
 
-        navigate(`${name}`);
+        navigate(`Demo_layout/${name}`);
         // 換頁時返回頂部
         handleScrollTo();
     }
