@@ -32,7 +32,7 @@ export default function MenuProvider ({ children }) {
     } 
   
     const DetectRouter = async(path) => {
-        const pathname = path.split("/")[1];
+        const pathname = path.indexOf('Demo_layout') > -1 ? path.split("/")[2] : path.split("/")[1];
         if( pathname !== "home" ) {
             // 檢查目錄陣列是否有符合條件者
             const checking = await CheckList( MenuList , pathname );

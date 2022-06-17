@@ -26,7 +26,7 @@ const StyledLink = styled.a`
 
 export default ({ name , desc , selected , handleSelect= f => f }) => {
     return (
-        <StyledLink onClick={ () => handleSelect(name) } selected={selected}> { desc } </StyledLink>
+        <StyledLink onClick={ (e) => { e.preventDefault(); handleSelect(name); } } selected={selected}> { desc } </StyledLink>
     )
 
 }
